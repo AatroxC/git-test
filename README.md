@@ -1,5 +1,3 @@
-# git-test
-this is git test.
 # WeCommunity
 微博、微信、微X......各种微，我们也跟上潮流叫微社区，英文名是 WeCommunity！是不是和微信(WeChat)很像？
 
@@ -113,25 +111,25 @@ this is git test.
 - 修改 `Nginx` 配置文件：
 
   ```nginx
-  upstream tomcat-community {
-  	server localhost:8080 max_fails=5 fail_timeout=20s;
-  }
-  server {
-      listen       80;
-      server_name  community.aatroxc.club;
-  
-      location /{
-  		proxy_pass   http://tomcat-community;
-      }
-  }
-  server {
-  	listen       80;
-  	server_name  static.aatroxc.club;
-  	location /{
-          # 静态资源
-  		root  /myapps/java/wecommunity/static;
-  	}
-  }
+upstream tomcat-community {
+    server localhost:8080 max_fails=5 fail_timeout=20s;
+}
+server {
+    listen       80;
+    server_name  community.aatroxc.club;
+
+    location /{
+        proxy_pass   http://tomcat-community;
+    }
+}
+server {
+    listen       80;
+    server_name  static.aatroxc.club;
+    location /{
+        # 静态资源
+        root  /myapps/java/wecommunity/static;
+    }
+}
   ```
 
   根据域名适当修改
