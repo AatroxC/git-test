@@ -1,11 +1,17 @@
 # WeCommunity
-微博、微信、微X......各种微，我们也跟上潮流叫微社区，英文名是 WeCommunity！是不是和微信(WeChat)很像？
+> 微博、微信、微X......各种微，我们也跟上潮流叫微社区，英文名是 WeCommunity！是不是和微信(WeChat)很像？
 
 微社区是一个用户交流平台，类似论坛，提供有：帖子管理、评论、关注、点赞、搜索、私信、数据统计等功能。
+
+项目目前部署在阿里云1核2G云服务器上，所有的组件都是单机模式运行。
+
+访问网址：[http://community.aatroxc.club](http://community.aatroxc.club)
+
 
 ### 依葫芦画瓢的项目架构图
 
 ![项目架构设计](https://i.loli.net/2020/07/01/umXATrRW2PCLhEI.png)
+
 
 ### 功能描述
 
@@ -72,20 +78,20 @@
 
 ### 界面设计
 
-![主页](https://i.loli.net/2020/07/01/VbQYPd9wvWzxjy8.jpg)
+![主页](https://i.loli.net/2020/07/01/VbQYPd9wvWzxjy8.jpg "主页")
 
-![帖子发布](https://i.loli.net/2020/07/01/ANeDU75GaMB36ZT.jpg)
+![帖子发布](https://i.loli.net/2020/07/01/ANeDU75GaMB36ZT.jpg "帖子发布")
 
-![私信列表_私信详情](https://i.loli.net/2020/07/01/p6HQtoPlJXNGdwz.jpg)
+![私信列表_私信详情](https://i.loli.net/2020/07/01/p6HQtoPlJXNGdwz.jpg "私信列表_私信详情")
 
-![系统通知_](https://i.loli.net/2020/07/01/mbvtnlCgZyYWqLS.jpg)
+![系统通知_](https://i.loli.net/2020/07/01/mbvtnlCgZyYWqLS.jpg "系统通知_")
 
 
 
 ### 文件说明
 
 - wecommunity.sql：数据库文件
-- wecommunity文件夹：Maven项目源码
+- wecommunity文件夹：Maven 项目源码
 - static文件夹：前端静态资源，需独立部署
 
 
@@ -136,8 +142,11 @@
 
 - 将项目配置文件 `application.yml` 中的地址、密码、七牛云 key 等配置好，还有静态资源中的 `global.js` 配置七牛云存储空间的 url
 
-- 进入 Maven 项目目录执行打 war 包命令：`mvn clean package -Dmaven.test.skip=true`
+- 进入 Maven 项目目录执行打 war 包命令：`mvn clean package -Dmaven.test.skip=true` 放到 Tomcat 中启动，根据在 Nginx 中配置的域名访问即可
 
-  放到 Tomcat 中启动
+  
 
-- 根据在 Nginx 中配置的域名访问即可
+
+### 计划的部署模型
+
+![系统架构图](https://i.loli.net/2020/07/01/aeb4DlWr6GcAOJ8.jpg "系统架构图")
