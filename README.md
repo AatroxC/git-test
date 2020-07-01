@@ -8,9 +8,11 @@
 访问网址：[http://community.aatroxc.club](http://community.aatroxc.club)
 
 
+
+
 ### 依葫芦画瓢的项目架构图
 
-![项目架构设计](https://i.loli.net/2020/07/01/umXATrRW2PCLhEI.png)
+![项目架构设计图](https://i.loli.net/2020/07/01/umXATrRW2PCLhEI.png "项目架构设计图")
 
 
 ### 功能描述
@@ -62,7 +64,7 @@
 - Spring Boot
 - SpringMVC
 - Spring
-- Mybatis3、通用mapper
+- MyBatis3、通用mapper
 - Spring Security：安全框架
 - Redis：缓存及数据存储
 - Kafka：消息队列
@@ -73,6 +75,14 @@
 - Caffeine：Java本地缓存库
 - MySQL
 - 七牛云：第三方文件存储服务
+
+
+
+### 各个功能模块所对应的技术点
+
+![功能模块对应的技术点](https://i.loli.net/2020/07/01/u3DRnvrxfUNKhtc.jpg)
+
+
 
 
 
@@ -88,11 +98,15 @@
 
 
 
+
+
 ### 文件说明
 
 - wecommunity.sql：数据库文件
 - wecommunity文件夹：Maven 项目源码
 - static文件夹：前端静态资源，需独立部署
+
+
 
 
 
@@ -144,7 +158,10 @@
 
 - 进入 Maven 项目目录执行打 war 包命令：`mvn clean package -Dmaven.test.skip=true` 放到 Tomcat 中启动，根据在 Nginx 中配置的域名访问即可
 
-  
+
+
+
+
 
 
 ### 计划的部署模型
